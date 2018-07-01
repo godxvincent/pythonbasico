@@ -21,6 +21,7 @@ label.config(textvariable=texto)
 # Para adicionar una imagen se puede una jpg o gif con la clase PhotoImage
 imagen = PhotoImage(file="imagen.gif")
 imagen = imagen.subsample(2, 2)
+# imagen = imagen.zoom(1,1) Para acercar la imagen.
 label.config(image=imagen, bd=0)
 # label.config(compound="right", width=140, heigh=20)
 # Modulo externo para manejo de otros formatos de imagen.
