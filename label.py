@@ -5,6 +5,8 @@ root = Tk()
 root.title("Titulo de la Ventana")
 root.iconbitmap("hola.ico")
 
+texto = StringVar()
+texto.set("Texto del StringVar")
 # Se puede establecer un ancho y una altura al frame.
 frame = Frame(root, width=480, heigh=320)
 frame.pack()
@@ -13,5 +15,12 @@ label = Label(frame, text="Etiqueta")
 # Al usar pack() ignora el tamaño dado al frame y reajusta todo al contenido
 # del label.
 label.place(x=10, y=10)
+label.config(bg="green", fg="blue", font=("Verdana", 24))
+# Se asigna al atributo textvariable la variable texto definida en linea 9.
+label.config(textvariable=texto)
+# Para adicionar una imagen se puede una jpg o gif con la clase PhotoImage
+imagen = PhotoImage(file="imagen.gif")
+label.config(image=imagen, bd=0)
+# Modulo externo para manejo de otros formatos de imagen.
 
 root.mainloop()
