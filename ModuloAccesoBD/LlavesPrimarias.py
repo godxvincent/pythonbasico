@@ -3,14 +3,14 @@ import sqlite3
 # Se crea la base de datos2 y luego  se crea la base de datos de productos.
 # conexion = sqlite3.connect("basedatos2.db")
 # conexion = sqlite3.connect("productos.db")
-conexion = sqlite3.connect("usuarios_autoincremental.db")
+conexion = sqlite3.connect("usuarios_autoincremental2.db")
 
 cursor = conexion.cursor()
 
 # cursor.execute("""
 #             CREATE TABLE usuario
 #             (
-#                 dni VARHCHAR(9) PRIMARY KEY,
+#                 dni VARCHAR(9) PRIMARY KEY,
 #                 nombre VARCHAR(100),
 #                 edad INTEGER,
 #                 email VARCHAR(100)
@@ -46,7 +46,7 @@ cursor.execute("""
             CREATE TABLE usuario
             (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
-                dni VARHCHAR(9) UNIQUE ,
+                dni VARCHAR(9) UNIQUE ,
                 nombre VARCHAR(100),
                 edad INTEGER,
                 email VARCHAR(100)
