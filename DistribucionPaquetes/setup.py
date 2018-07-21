@@ -10,7 +10,7 @@ setup(
     description="Este es un paquete de ejemplo",
     author="Ricardo Vargas",
     author_email="godxvincent@xxxx.com",
-    install_requires=["pillow=1.1.0"],
+    # install_requires=["pillow=1.1.0"],
     test_suite="tests",
     # install_requires=["pillow>=1.1.0"],
     # url="http://hcosta.info",
